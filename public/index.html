@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Crush Analyzer 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main-card">
+        <div id="input-section">
+            <h1>💖 Instagram Crush Analyzer</h1>
+            <p class="subtitle">Find out your compatibility score using our AI algorithm.</p>
+            
+            <div class="input-group">
+                <input type="text" id="crushName" placeholder="Enter your crush username" required>
+                <input type="text" id="userName" placeholder="Enter your username" required>
+            </div>
+
+            <button id="searchBtn" onclick="startPrank()">Search Analysis</button>
+            <p class="footer-link" onclick="checkAdmin()">Admin Access</p>
+        </div>
+
+        <div id="loading-section" class="hidden">
+            <div class="loader"></div>
+            <h2 id="status-text" class="glitch">Initializing...</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="bar"></div>
+            </div>
+        </div>
+
+        <div id="result-section" class="hidden">
+            <h1 class="reveal-text">APRIL FOOL 😂</h1>
+            <div class="data-box">
+                <p><strong>Your Name:</strong> <span id="resUser"></span></p>
+                <p><strong>Your Crush:</strong> <span id="resCrush"></span></p>
+            </div>
+            <p class="prank-msg">No data was hacked. You got pranked 😏</p>
+            <button onclick="location.reload()" class="reset-btn">Try Again</button>
+            <div class="footer-credit">Created by @ig.sahitya</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
